@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ไฟล์ประกอบหนังสือ จากตัวเลขสู่การตัดสินใจ</title>
+<meta name="description" content="แม่แบบสเปรดชีตและโมเดลสี่บริษัทกรณีศึกษา ประกอบหนังสือ จากตัวเลขสู่การตัดสินใจ โดย Solar">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --ink:#1f2933; --muted:#5b6770; --accent:#0b5d7a; --gold:#a86a12; --green:#2f7d4f;
+          --bg:#ffffff; --card:#f4f7f9; --rule:#c9d2d9; }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) { --ink:#e6ebef; --muted:#a3afb8; --accent:#6cc0dd; --gold:#e0a64a; --green:#6cc595;
+                                      --bg:#12181d; --card:#1b242b; --rule:#33414c; }
+  }
+  :root[data-theme="dark"] { --ink:#e6ebef; --muted:#a3afb8; --accent:#6cc0dd; --gold:#e0a64a; --green:#6cc595;
+                             --bg:#12181d; --card:#1b242b; --rule:#33414c; }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--ink); font-family:"Noto Sans Thai", system-ui, sans-serif;
+         line-height:1.7; font-size:16px; }
+  main { max-width:860px; margin:0 auto; padding:32px 16px 64px; }
+  h1 { color:var(--accent); font-size:1.75rem; line-height:1.3; margin:0 0 4px; }
+  h2 { color:var(--accent); font-size:1.2rem; margin:40px 0 12px; border-bottom:1px solid var(--rule); padding-bottom:6px; }
+  .sub { color:var(--muted); margin:0 0 20px; }
+  .note { background:var(--card); border-left:3px solid var(--gold); padding:12px 16px; border-radius:0 6px 6px 0; margin:16px 0; }
+  .grid { display:grid; grid-template-columns:repeat(auto-fill, minmax(250px, 1fr)); gap:12px; }
+  .card { background:var(--card); border:1px solid var(--rule); border-radius:8px; padding:14px 16px; }
+  .card h3 { margin:0 0 4px; font-size:1rem; }
+  .card p { margin:0 0 8px; color:var(--muted); font-size:.92rem; }
+  .card .ch { font-size:.8rem; color:var(--gold); font-weight:600; }
+  a { color:var(--accent); }
+  a.dl { display:inline-block; font-weight:600; text-decoration:none; border:1px solid var(--accent);
+         border-radius:6px; padding:2px 10px; font-size:.88rem; }
+  ol, ul { padding-left:1.3em; }
+  table { border-collapse:collapse; width:100%; font-size:.92rem; }
+  th, td { text-align:left; padding:6px 8px; border-bottom:1px solid var(--rule); vertical-align:top; }
+  th { color:var(--muted); font-weight:600; }
+  footer { margin-top:48px; color:var(--muted); font-size:.85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ไฟล์ประกอบหนังสือ จากตัวเลขสู่การตัดสินใจ</h1>
+  <p class="sub">วิเคราะห์ธุรกิจ ประเมินมูลค่า บริหารความเสี่ยง และตัดสินใจลงทุนได้ด้วยตัวเอง · Solar</p>
+
+  <div class="note">เนื้อหาเพื่อการศึกษา ไม่ใช่คำแนะนำให้ซื้อ ขาย หรือถือหลักทรัพย์ใด และไม่มีราคาเป้าหมาย
+  ข้อมูลในโมเดลเป็นข้อมูล ณ จุดตัดของหนังสือ (งบ FY2025 + งบระหว่างกาลไตรมาส 2 ปี 2026 · ราคาปิด 30 กันยายน 2026)
+  ข้อมูลราคาและงบการเงินเปลี่ยนแปลงหลังการตีพิมพ์</div>
+
+  <h2>แม่แบบ (ตัวเลขตั้งต้นเป็นตัวอย่างตัวเลขสมมติ)</h2>
+  <div class="grid">
+    <div class="card"><span class="ch">ภาค 4</span><h3>แผงอัตราส่วน</h3><p>อัตรากำไร ROA ROE DuPont ROIC สภาพคล่อง ภาระหนี้ วงจรเงินสด</p><a class="dl" href="files/01-ratio-dashboard.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 18–19</span><h3>ตัวตรวจคุณภาพกำไร</h3><p>Accruals Ratio, CFO ÷ กำไร, ลูกหนี้และสินค้าเทียบรายได้, ส่วนต่าง Non-GAAP</p><a class="dl" href="files/02-earnings-quality-checker.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 27</span><h3>WACC</h3><p>CAPM จากเบตาอุตสาหกรรม น้ำหนักตามมูลค่าตลาด และผลต่อมูลค่า</p><a class="dl" href="files/03-wacc.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 28–29</span><h3>DCF พร้อมตารางความอ่อนไหว</h3><p>FCFF จากตัวขับเคลื่อน มูลค่าปลายงวด สะพานสู่มูลค่าต่อหุ้น ตาราง WACC × g</p><a class="dl" href="files/04-dcf-sensitivity.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 30</span><h3>DDM</h3><p>Gordon, การเติบโตที่ราคาสะท้อน, DDM ตาม ROE และแบบสองช่วง</p><a class="dl" href="files/05-ddm.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 46–47</span><h3>ตัวคำนวณขนาดสถานะ</h3><p>จำนวนหุ้นจากความเสียหายที่ยอมรับ เพดานต่อสถานะ และ Drawdown</p><a class="dl" href="files/06-position-sizer.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 3, 43–45, 49–50, 64</span><h3>Thesis Canvas และการติดตาม</h3><p>สิบช่องของ Canvas ตัวชี้วัดพร้อมระดับเตือนและระดับล้ม บันทึกการทบทวนและ Brier Score</p><a class="dl" href="files/07-thesis-tracker.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 53–54</span><h3>แผ่นคัดกรอง</h3><p>ตั้งเกณฑ์แล้วดูว่าบริษัทใดผ่าน เกณฑ์เป็นจุดเริ่มคำถาม ไม่ใช่คำตอบ</p><a class="dl" href="files/08-screening-sheet.xlsx">.xlsx</a></div>
+  </div>
+
+  <h2>โมเดลสี่บริษัทกรณีศึกษา ณ วันตัดข้อมูล</h2>
+  <p>ทุกตัวเลขมีแหล่งและหน้าหรือแถวในแผ่น Inputs สมมติฐานเป็นของผู้เขียน แผ่น "ตรวจกับหนังสือ" เทียบผลของโมเดลกับตัวเลขที่พิมพ์ในบท</p>
+  <div class="grid">
+    <div class="card"><span class="ch">บทที่ 25, 27, 30–31, 58</span><h3>ธนาคารกสิกรไทย (KBANK)</h3><p>BVPS, P/BV, ROE ภายใต้ต้นทุนเครดิตสามระดับ, P/BV ที่สมเหตุสมผล, DDM</p><a class="dl" href="files/case-KBANK-kasikornbank.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 25, 27, Case Lab 6, 59</span><h3>ServiceNow (NOW)</h3><p>EV, WACC, มูลค่าจาก FCF ก่อนและหลังหัก SBC, เซลล์สำหรับ Goal Seek</p><a class="dl" href="files/case-NOW-servicenow.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 24–27, Case Lab 6, 60</span><h3>Caterpillar (CAT)</h3><p>EV ของ MP&amp;E, มูลค่าจากอัตรากำไรปกติ × การเติบโต, P/E บนกำไรหลายปี, ke สองวิธี</p><a class="dl" href="files/case-CAT-caterpillar.xlsx">.xlsx</a></div>
+    <div class="card"><span class="ch">บทที่ 25, 27–30, 61</span><h3>Coca-Cola (KO)</h3><p>DCF ฐาน, ฉากทัศน์ bear/base/bull, ตาราง WACC × g, Gordon DDM</p><a class="dl" href="files/case-KO-coca-cola.xlsx">.xlsx</a></div>
+  </div>
+
+  <h2>วิธีใช้</h2>
+  <ol>
+    <li>ดาวน์โหลดไฟล์ .xlsx แล้วเปิดด้วย Excel หรืออัปโหลดเข้า Google Drive แล้วเลือก "เปิดด้วย Google ชีต"</li>
+    <li>อ่านแผ่น "อ่านก่อน" ทุกไฟล์มีโครงสร้างเดียวกันตามหัวข้อ 55.4: แผ่น Inputs (เซลล์สีเหลืองคือค่าที่เปลี่ยนได้) แผ่นคำนวณที่มีแต่สูตร และเซลล์ "ตรวจ" สีเขียว</li>
+    <li>เปลี่ยนเฉพาะแผ่น Inputs บันทึกแหล่งและหน้าของตัวเลขทุกตัวที่คุณใส่ และลงวันที่ทุกเวอร์ชัน</li>
+  </ol>
+  <p>หนังสือใช้ได้ครบโดยไม่ต้องเปิดไฟล์เหล่านี้ เพราะโครงสร้างที่จำเป็นพิมพ์ไว้ในเล่มแล้ว</p>
+
+  <h2>การถือหุ้นของผู้เขียน</h2>
+  <p>ณ วันที่ 30 กันยายน 2026 ผู้เขียนไม่ได้ถือหุ้น และไม่ได้ถือตราสารอนุพันธ์ที่อ้างอิงหุ้น ของบริษัทกรณีศึกษาทั้งสี่ ถ้าสถานะนี้เปลี่ยน จะแจ้งไว้ในหน้านี้</p>
+  <table><tr><th>วันที่</th><th>สถานะ</th></tr><tr><td>2026-09-30</td><td>ไม่ถือ KBANK NOW CAT และ KO</td></tr></table>
+
+  <h2>คำแก้ (Errata)</h2>
+  <p>ยังไม่มีรายการ ถ้าพบข้อผิดพลาด หน้านี้จะระบุหน้า ข้อความเดิม และข้อความที่แก้</p>
+
+  <footer>ไฟล์เวอร์ชัน 2026-10-11 · ตรวจสูตรทุกไฟล์ด้วยการคำนวณใหม่ก่อนเผยแพร่ · © Solar</footer>
+</main>
+</body>
+</html>
